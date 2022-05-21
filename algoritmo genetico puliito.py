@@ -12,10 +12,9 @@ model=tf.keras.models.load_model(
 def mutate(imagine):
     coordinatex = random.randrange(0, 27)
     coordinatey = random.randrange(0, 27)
-    variation = random.randrange(-10, 10)
+    variation = random.randrange(-50, 50)
     variation = variation / 100
     imagine[coordinatex, coordinatey]=imagine[coordinatex, coordinatey]+variation
-    print(imagine[coordinatex, coordinatey])
     if imagine[coordinatex, coordinatey]<0:
         imagine[coordinatex, coordinatey]=0
     elif imagine[coordinatex, coordinatey]>1:
@@ -50,7 +49,6 @@ def algoritmo():
         father=ancestor
         son=mutate(father)
         while n!=1:
-            print("qui")
             son = mutate(father)
             father=compare(father, son)
             if fitnessFonction(father)<0 or fitnessFonction(son)<0:
