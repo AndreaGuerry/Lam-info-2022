@@ -1,11 +1,9 @@
-import matplotlib
-
 from funzioni import algoritmo
-import matplotlib as plt
+import matplotlib.pyplot as plt
 fail=algoritmo.algoritmo()
 print(fail)
 img = fail.reshape((28, 28))
+img = fail.reshape((28, 28))
 plt.title('Label is ')
 plt.imshow(img, cmap='gray')
-plt.savefig('fail.png')
-
+plt.savefig('resultati/fail1.png')
