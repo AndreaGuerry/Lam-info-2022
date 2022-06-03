@@ -1,7 +1,7 @@
 from funzioni import fitnessFonction
-def compare(father, son):
-    fffather=fitnessFonction.fitnessFonction(father)
-    ffson=fitnessFonction.fitnessFonction(son)
+def compare(father, son, numero):
+    fffather=fitnessFonction.fitnessFonction(father, numero)
+    ffson=fitnessFonction.fitnessFonction(son, numero)
     if ffson<=0:
         return son
     elif fffather<=0:

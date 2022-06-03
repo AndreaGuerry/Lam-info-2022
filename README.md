@@ -1,3 +1,3 @@
 # Lam-info-2022
 
-qualcosa
+Insieme del codice prodotto per il mio lavoro di maturità

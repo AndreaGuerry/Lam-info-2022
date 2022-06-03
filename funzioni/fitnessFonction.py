@@ -8,9 +8,10 @@ model=tf.keras.models.load_model(
     'saved_model/my_model', custom_objects=None, compile=True, options=None
 )
 
-def fitnessFonction(imagine):
+def fitnessFonction(imagine, numero):
     predictionson=model(imagine.reshape(1, 28, 28)).numpy()
+    risultatogiusto=predictionson[0, numero]
     risultatopredetto=numpy.argmax(predictionson)
     risultatosecondo=numpy.argmax(numpy.delete(predictionson, risultatopredetto))
-    ff=risultatopredetto-risultatosecondo
+    ff=risultatogiusto-risultatosecondo
     return ff
