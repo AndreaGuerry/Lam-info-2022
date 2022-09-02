@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy
-set=numpy.load('risultati/array.npy')
+set=numpy.load('risultati/array0.npy')
 
 n=1
 mnist = tf.keras.datasets.mnist
